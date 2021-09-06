@@ -1,0 +1,179 @@
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box
+}
+#root{
+  height: 100%;
+}
+body{
+  margin:0;
+  height:100vh;
+  font-size:1.6rem;
+  font-family:Helvetica,Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout */
+.grid-container{
+  display:grid;
+  grid-template-areas:/*Onde vão ficar os grids*/
+  'header'
+  'main'
+  'footer';
+  grid-template-columns:1fr; /*como nao tem barra do lado apenas 1 fr*/
+  grid-template-rows: 6rem 1fr 5rem;/*Header,Main,Footer*/
+  height:100%;
+}
+
+
+header{
+  grid-area:header;/*conectamos o container com o header*/
+  background-color:rgb(38, 146, 218);
+}
+main{
+  grid-area:main;
+  background-color:rgb(255, 255, 255);
+  padding:1rem
+}
+footer{
+  grid-area:footer;
+  background-color:rgb(38, 146, 218);
+  color:rgb(218, 222, 236)
+}
+.row{ /* o flex vai fazer ficar um do lado do outro*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;   
+}
+/*area comum*/
+a{
+  text-decoration:none;
+  color:rgba(0, 0, 0, 0.63)    
+}
+a:hover{
+  color:black;
+  transition:0.5s
+}
+ul{
+  padding:0;
+  margin:0;
+  list-style-type:none
+}
+li{
+  margin-top:1rem
+}
+button{
+  padding:1rem;
+  border-radius:0.5rem;
+  border:0.1rem rgba(24, 2, 2, 0.199) solid;
+  font-size:1.6rem;
+  font-family:Helvetica,Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(92, 194, 123, 0.726);
+  cursor:pointer;
+}
+button:hover{
+  border-color:rgba(0, 0, 0, 0.671);
+  background-color: rgb(0, 250, 75);
+  transition: 0.5s;
+}
+button.block{
+  width: 100%;
+}
+h1{
+  font-size:1.8rem;
+  padding:1rem 0;
+}
+h2{
+  font-size:1.6rem;
+  padding:1rem 0;
+}
+
+/*header seção*/
+header a{
+  color:white;
+  padding: 5rem;
+  font-size: 20px;
+}
+.carrinhoform{
+  font-size: 1,1rem;
+  position:relative;
+  left:5rem    
+}
+.entrarform{
+  font-size:1,1rem;
+
+}
+
+/*footer*/
+.row.center{
+  justify-content: center;
+}
+.row.top{
+  align-items: flex-start;
+}
+.col-1{
+  flex:1 1 20rem
+}
+.col-2{
+  flex:2 1 40rem
+}
+/*Imagens*/
+img{
+  border-radius: 0.5rem;    
+}
+
+img.medium{
+  max-width:30rem;
+  width:100%
+}
+img.large{
+  max-width:60rem;
+  width:100%
+}
+
+/*carta*/
+
+.card{
+  border:0.1rem grey solid;
+  background-color:rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  margin:1rem
+}
+
+.card-body{ 
+  padding:1rem
+}
+.card-body > *{/*Todos os filhos*/
+  margin-bottom: 0.5rem;
+}
+.price{
+  font-size:2rem;
+  color:green;
+  padding-top: 0.6rem;
+}
+.rating span{
+  color:gold;
+  margin:0.2rem; 
+
+}
+.rating span:last-child{
+color: black;
+}
+
+/*Alertas*/
+.success{
+  color:green;
+  font-weight: bolder;
+  
+  
+}
+.error{
+  color:rgb(204, 18, 18);
+  font-weight: bolder;
+  
+}
